@@ -43,36 +43,36 @@ header, footer {
 /* ------------------- */
 
 header, 
-#logo-section,
-#header-links {
+.logo-section,
+.header-links {
     display: flex;
 }
 header {
     justify-content: space-between;
     padding: 0 120px;
 }
-#logo-section {
+.logo-section {
     align-items: center;
     gap: 10px;
 }
-#logo-section img {
+.logo-section img {
     height: 80%;
     filter: brightness(0) invert(1);
 }
-#logo-section a {
+.logo-section a {
     font-size: 25px;
     color: white;
     text-decoration: none;
     text-shadow: -4px 4px 2px rgb(0, 0, 0);
     font-weight: 900;
 }
-#header-links {
+.header-links {
     justify-content: center;
     align-items: center;
     list-style: none;
     gap: 40px;
 }
-#header-links a {
+.header-links a {
     text-decoration: none;
     color: white;
     text-shadow: 4px 4px 2px rgb(0, 0, 0);
@@ -83,15 +83,16 @@ header {
 #hero-section {
     display: flex;
 }
-#hero-textarea {
+
+.hero-textarea {
     background-color: red;
     width: 50%;
 }
-#hero-imgarea {
+.hero-imgarea {
     background-color: blue;
     width: 50%;
 }
-#hero-imgarea img {
+.hero-imgarea img {
     width: 10%;
 }
 
