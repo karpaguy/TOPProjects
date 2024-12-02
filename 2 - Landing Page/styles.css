@@ -12,34 +12,28 @@
     font-style: normal;
 }
 
-
 * {
     margin: 0;
     padding: 0;
 
     --footerNheaderSize: 10vh;
-
     --CetaceanBlue: rgb(0, 15, 43);   
 }
 
 /* Container Formating */
-
 header, footer {
-    background-color: var(--CetaceanBlue);
     height: var(--footerNheaderSize);
     font-family: "Space Mono", monospace;
 }
 .container {
-     height: 100vh;
-     background-color: gray;
-     padding: 0 120px;
+    height: 100vh;
+    background-color: gray;
+    padding: 0 150px;
 }
 #hero-section, 
 #cta-section {
     height: calc(100vh - var(--footerNheaderSize));
-    background-color: pink;
 }
-
 /* ------------------- */
 
 header, 
@@ -49,7 +43,10 @@ header,
 }
 header {
     justify-content: space-between;
-    padding: 0 120px;
+    padding: 0 150px;
+    background-color: rgb(0, 14, 41);
+
+    /* #000e29 */
 }
 .logo-section {
     align-items: center;
@@ -76,23 +73,66 @@ header {
     text-decoration: none;
     color: white;
     text-shadow: 4px 4px 2px rgb(0, 0, 0);
+    transition: 0.6s;
 }
-
-/* PARA BOTÃO SE PÁ text-shadow: 4px 4px 2px rgba(0,0,0,0.6); */
+.header-links a:hover {
+    color: rgb(0,212,255);
+ }
 
 #hero-section {
     display: flex;
+    background: linear-gradient( rgb(0, 14, 41, 1), rgba(0, 0, 0, 0.4) ), url('./IMAGES/StarryBackground.jpg');
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+.hero-textarea {
+    width: 50%;
+}
+.hero-textarea h1 {
+    color: white;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+}
+.subtext {
+    color: #E5E7EB;
+    font-size: 20px;
+}
+.subtext span {
+    text-shadow: -4px 4px 2px rgb(0, 0, 0);
+    font-weight: 700;
+    color: #E5E7EB;
+}
+.sign-btn {
+    background-color: rgb(56, 130, 246);
+    color: white;
+    font-size: 16px;
+    font-family:'Roboto', sans-serif;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    padding: 8px;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+    box-shadow: -4px 4px 2px rgb(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.sign-btn:hover {
+    background-color: rgba(56, 130, 246, 0.5);
+    font-weight: 900;
 }
 
-.hero-textarea {
-    background-color: red;
-    width: 50%;
-}
 .hero-imgarea {
-    background-color: blue;
     width: 50%;
+    align-items: center;
 }
 .hero-imgarea img {
-    width: 10%;
+    width: 75%;
 }
 
+/* Na próxima section, faça parece que está destacado para frente, aquele efeito maneiro lá.
+Na terceira, usa o background do hero, porém coloca de ponta cabeça, para dar uma sensação de continuidade e diferença. */
