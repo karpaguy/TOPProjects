@@ -129,6 +129,7 @@ header {
 .hero-imgarea {
     width: 50%;
     align-items: center;
+    /* Testar flex-end aqui e width: 85% na imagem. */
 }
 .hero-imgarea img {
     width: 75%;
