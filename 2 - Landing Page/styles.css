@@ -28,11 +28,18 @@ header, footer {
 .container {
     height: 100vh;
     background-color: gray;
-    padding: 0 150px;
 }
+
 #hero-section, 
 #cta-section {
     height: calc(100vh - var(--footerNheaderSize));
+    padding: 0 150px;
+}
+#quote-section, #info-section {
+    padding: 0 200px;
+}
+#quote-section {
+    background-color: blue;
 }
 /* ------------------- */
 
@@ -82,6 +89,7 @@ header {
 #hero-section {
     display: flex;
     background: linear-gradient( rgb(0, 14, 41, 1), rgba(0, 0, 0, 0.4) ), url('./IMAGES/StarryBackground.jpg');
+    background-attachment: fixed;
 }
 .hero {
     display: flex;
@@ -119,7 +127,7 @@ header {
     margin: 20px 0 0 0;
     cursor: pointer;
     box-shadow: -4px 4px 2px rgb(0, 0, 0, 0.5);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .sign-btn:hover {
     background-color: rgba(56, 130, 246, 0.5);
@@ -127,12 +135,68 @@ header {
 }
 
 .hero-imgarea {
-    width: 50%;
-    align-items: center;
+    width: 55%;
+    align-items: flex-end;
     /* Testar flex-end aqui e width: 85% na imagem. */
 }
 .hero-imgarea img {
     width: 75%;
+}
+
+#info-section {
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgb(0, 14, 41, 0), rgba(87, 87, 87, 0.253) ), url('./IMAGES/moon-texture-surface.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#info-section>p {
+    font-size: 50px;
+    font-family: "Space Mono", monospace;
+    text-transform: uppercase;
+}
+
+.info-block-section {
+    display: flex;
+    width: 100%;
+
+}
+.info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+.info-block img {
+    max-width: 80%;
+    border: solid 5px rgb(19, 250, 223);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.info-block img:hover {
+    box-shadow: -4px 4px 2px rgb(0, 0, 0, 0.5);
+    max-width: 82%;
+}
+.info-block p {
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    transition: 0.2s;
+    color: white;
+
+}
+.info-block img:hover~p {
+
+    text-shadow: -4px 4px 5px rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+#quote-section {
+    background: linear-gradient( rgb(0, 14, 41, 1), rgba(0, 0, 0, 0.4) ), url('./IMAGES/StarryBackgroundFlip.png');
+    background-attachment: fixed;
 }
 
 /* Na próxima section, faça parece que está destacado para frente, aquele efeito maneiro lá.
