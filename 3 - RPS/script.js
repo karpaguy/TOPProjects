@@ -14,22 +14,17 @@ function playRound(playerChoice, computerChoice) {
     if (playerChoice == 'PEDRA' && computerChoice == "PAPEL") {
         playerScore++;
     }
-    else if (playerChoice == 'PEDRA' && computerChoice == "TESOURA") {
-        machineScore++;
-    }
-
     else if (playerChoice == 'PAPEL' && computerChoice == "PEDRA") {
         playerScore++;
     }
-    else if (playerChoice == 'PAPEL' && computerChoice == "TESOURA") {
-        machineScore++;
-    }
-
     else if (playerChoice == 'TESOURA' && computerChoice == "PAPEL") {
         playerScore++
     }
-    else if (playerChoice == 'TESOURA' && computerChoice == "PEDRA") {
-        machineScore++
+    else if (playerChoice == computerChoice) {
+        console.log('Draw')
+    }
+    else {
+        machineScore++;
     }
 
     alert(`Player Score → ${playerScore} | Computer Choice → ${machineScore}`);
@@ -43,11 +38,11 @@ function playGame() {
     playRound(playerSelection, computerSelection)
 }
 
-playGame();
-playGame();
-playGame();
-playGame();
-playGame();
+// playGame();
+// playGame();
+// playGame();
+// playGame();
+// playGame();
 console.log(`Player Score → ${playerScore} | Computer Choice → ${machineScore}`);
 
 // function scorePoint(info) {
