@@ -1,60 +1,45 @@
-function getComputerChoice() {
-    return botChoices[(Math.floor(Math.random() * 3))];
-}
-function getPlayerChoice() {
-    return prompt('Escolha PEDRA/PAPEL/TESOURA em MAÍSCULO: ').toUpperCase();
-}
+const optionsList = document.querySelectorAll('.option');
+const resultDisplay = document.querySelectorAll('.result');
 
-const botChoices = ["PEDRA", "PAPEL", "TESOURA"];
+const playerScoreDisplay = document.querySelector('.player-score');
+const machineScoreDisplay = document.querySelector('.machine-score');
+
+const machineChoices = ["ROCK", "PAPER", "SCISSORS"];
 
 let playerScore = 0;
 let machineScore = 0;
 
-function playRound(playerChoice, computerChoice) {
-    if (playerChoice == 'PEDRA' && computerChoice == "PAPEL") {
+function getMachineChoice() {
+    return machineChoices[(Math.floor(Math.random() * 3))];
+}
+
+function playRound() {
+    let machineChoice = getMachineChoice();
+    if (this.value == 'ROCK' && machineChoice == "SCISSORS") {
+        resultDisplay.textContent = `You win! ${this.value} beats ${machineChoice}.`
         playerScore++;
     }
-    else if (playerChoice == 'PAPEL' && computerChoice == "PEDRA") {
+    else if (this.value == 'PAPER' && machineChoice == "ROCK") {
+        resultDisplay.textContent = `You win! ${this.value} beats ${machineChoice}.`
         playerScore++;
     }
-    else if (playerChoice == 'TESOURA' && computerChoice == "PAPEL") {
+    else if (this.value == 'SCISSORS' && machineChoice == "PAPER") {
+        resultDisplay.textContent = `You win! ${this.value} beats ${machineChoice}.`
         playerScore++
     }
-    else if (playerChoice == computerChoice) {
+    else if (this.value == machineChoice) {
         console.log('Draw')
     }
     else {
         machineScore++;
     }
 
-    alert(`Player Score → ${playerScore} | Computer Choice → ${machineScore}`);
-};
-
-function playGame() {
-    const playerSelection = getPlayerChoice();
-    const computerSelection = getComputerChoice();
-    alert(computerSelection);
-
-    playRound(playerSelection, computerSelection)
+    console.log(`${this.value} → ${playerScore}`);
+    console.log(`${machineChoice} → ${machineScore}`);
+    console.log('_________')
 }
 
-// playGame();
-// playGame();
-// playGame();
-// playGame();
-// playGame();
-console.log(`Player Score → ${playerScore} | Computer Choice → ${machineScore}`);
-
-// function scorePoint(info) {
-//     if (info === 1) {
-//         playerScore++;
-//     } else if (info === 0) {
-//         botScore++;
-//     }
-// } /* COULD BE TERNARY OPERATOR */
-
-
-// function verifyWinner(playerChoice, computerChoice) {
-
-// }
+optionsList.forEach((button) => {
+    button.addEventListener('click', playRound)
+})
 
