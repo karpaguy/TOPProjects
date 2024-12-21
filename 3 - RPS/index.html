@@ -9,6 +9,35 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p>OPEN THE CONSOLE!</p>
+    <div class="intro-area">
+        <h1 class="title">WELCOME TO THE RPS GAME!</h1>
+        <p class="subtext">A classic of its time!</p>
+    </div>
+
+    <div class="game-area">
+        <p>pick a choice</p>
+        <div class="options">
+            <button class="option" id="rock" value="rock">
+                <p class="opt-emoji">✊</p>
+                <p class="opt-name">Rock</p>
+            </button>
+
+            <button class="option" id="paper" value="paper">
+                <p class="opt-emoji">✋</p>
+                <p class="opt-name">Paper</p>
+            </button>
+
+            <button class="option" id="scissors" value="scissors">
+                <p class="opt-emoji">✌️</p>
+                <p class="opt-name">Scissors</p>
+            </button>
+        </div>
+
+        <p class="result"></p>
+        <div class="score-area">x
+            <p class="player-score">Player Score</p>
+            <p class="machine-score">Machine Score</p>
+        </div>
+    </div>
 </body>
 </html>

@@ -7,13 +7,70 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    box-sizing: border-box;
+    gap: 30px;
+
+    background-color: rgb(122, 122, 247);
 }
-p {
+.intro-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
     font-size: 72px;
     color: white;
-    text-shadow: -4px 4px 10px black;
+    /* text-shadow: 4px 4px 10px rgb(70, 70, 252); */
+    text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+.subtext {
+    font-size: 20px;
+    font-style: italic;
+    color: whitesmoke;
+    text-shadow: 4px 4px 10px rgb(70, 70, 252);
+}   
+
+.game-area {
+    /* background-color: red; */
+}
+.game-area>p {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(248, 228, 191);
+    text-shadow: 0px 0px 6px rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+}
+.options {
+    display: flex;
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 100px;
+    height: 100px;
+    margin: 10px 20px;
+    cursor: pointer;
+
+    gap: 8px;
+    
+    background-color: rgb(147, 147, 251);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.2s;
+}
+.option:hover {
+    transform: scale(1.1);
+}
+.opt-emoji {
+    font-size: 32px;
 }
