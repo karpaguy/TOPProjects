@@ -1,16 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Skranji:wght@400;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+    height: 100vh;
+}
+.container {
+    background-color: blue;
+    width: 70%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
 }
 
+#configuration {
+    background-color: red;
+    width: 40%;
+    border: 2px solid black;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title {
+    font-size: 38px;
+}
 .grid {
-    border:  2px solid black;
-    width: 256px;
-    height: 256px;
+    border: 2px solid black;
+    width: 512px;
+    height: 512px;
+
+    display: flex;
 }
 
 .color-block {
-    width: 4px;
-    height: 4px;
     background-color: red;
 }
