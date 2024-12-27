@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    border:  2px solid black;
+    width: 256px;
+    height: 256px;
+}
+
+.color-block {
+    width: 4px;
+    height: 4px;
+    background-color: red;
+}
