@@ -1,28 +1,30 @@
 // const sizeInput = document.querySelector('.size-input');
 // const submitBtn = document.querySelector('#submit');
+const gridContainer = document.querySelector('.grid-container');
 
-// function createGrid(){
-//     const grid = document.createElement('div');
-//     grid.classList.add('grid');
 
-// }
+function createGrid(sizeDesired){
+    let squareWidth = 512 / sizeDesired;
+    let squareMaxCount = sizeDesired ** 2;
+
+    for (let i = 0; i < squareMaxCount; i++) {
+        const square = document.createElement('div');
+        square.classList.add('color-square');
+        square.style.width = squareWidth + "px";
+        gridContainer.appendChild(square);
+    }
+}
 
 // function changeGridSize() {
 //     for (let i = 0; i <= sizeInput.value; i++) {
 //         const colorBlock = document.createElement('div');
 //         colorBlock.classList.add('color-block');
-//         colorBlock.style.width = `${512 / sizeInput.value}px`;
-//         colorBlock.style.height = `${512 / sizeInput.value}px`;
+//         colorBlock.style.width = `${(512 / sizeInput.value) * 2}px`;
 //         grid.append(colorBlock);
-
-//         // Essa lógica atual está errada.
-//     }
-//     // 
-//     // Remeber to add catchs for possible errors, like adding a text instead of a number in the input.
-    
+//     }    
 // };
 
-
+createGrid(4);
 // submitBtn.addEventListener('click', changeGridSize);
 
 
