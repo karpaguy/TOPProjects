@@ -26,7 +26,12 @@ function setNewGrid() {
     if (newGridSize > 100) {
         alert('Grid Size cant be higher than 100x100!');
         return;
-    };
+    }
+    else if (isNaN(newGridSize)) {
+        alert('You must enter a number.');
+        return;
+    }
+
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.lastChild)
     };
