@@ -27,7 +27,7 @@ body {
     width: 40%;
     border: 2px solid black;
 }
-.submit-btn {
+.config {
     display: flex;
     gap: 2px;
 }
@@ -53,5 +53,4 @@ body {
 }
 .color-square {
     height: auto;
-    background-color: red;
 }
