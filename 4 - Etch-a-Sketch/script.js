@@ -34,18 +34,13 @@ function setNewGrid() {
     setGrid(newGridSize)
 }
 
-let pencilMode = "black";
-let colorPicked = "#ff0000";
+let pencilMode = "colorPicked";
 let rainbowColors = ['#e81416', '#ffa500', '#faeb36', '#79c314', '#487de7', '#4b369d', '#70369d'];
+
 const eraser = document.querySelector('#eraser');
-const blackPaint = document.querySelector('#blackpaint');
 const colorPicker = document.querySelector('#color-picker');
-const colorConfirm = document.querySelector('#color-confirm');
 const rainbowPaint = document.querySelector('#rainbow');
 
-function paintBlack(item) {
-    item.style.backgroundColor = 'black';
-}
 function eraserBlock(item) {
     item.style.backgroundColor = 'white';
 }
@@ -58,27 +53,20 @@ function paintRainbow(item) {
 
 function paintModes(){
     switch (pencilMode) {
-        case 'black':
-            paintBlack(this);
-            break;
         case 'eraser':
             eraserBlock(this);
             break;
         case 'colorPicked':
-            paintColor(this, colorPicked);
+            paintColor(this, colorPicker.value);
             break;
         case 'rainbow':
             paintRainbow(this)
             break;
     };
-} ;
+};
 
-blackPaint.addEventListener('click', () => { pencilMode = 'black' });
 eraser.addEventListener('click', () => { pencilMode = 'eraser' });
-colorConfirm.addEventListener('click', () => { 
-    pencilMode = 'colorPicked';
-    colorPicked = colorPicker.value;
-})
+colorPicker.addEventListener('click', () => { pencilMode = 'colorPicked';})
 rainbowPaint.addEventListener('click', () => {pencilMode = 'rainbow'});
 submitBtn.addEventListener('click', setNewGrid);
 setGrid(4);

@@ -11,25 +11,18 @@
 <body>
     <div class="container">
         <div id="configuration">
-            <div class="config">
+            <div class="size-config">
                 <p class="option-text">GRID SIZE PER SIZE</p>
-                <input type="text" class="size-input" placeholder="Format: n">
-                <button id="submit">Submit</button>
+                <div>
+                    <input type="text" class="size-input" placeholder="">
+                    <button id="submit">Submit</button>
+                </div>
             </div>
 
-            <div class="pencils">
-                <div class="config">
-                    <button class="pencil" id="eraser">ERASER</button>
-                    <button class="pencil" id="blackpaint">BLACK PAINT</button>
-
-                    <div class="picker-area">
-                        <input type="color" name="color" id="color-picker" value="#ff0000">
-                        <button class="pencil" id="color-confirm">PICK COLOR</button>
-                    </div>
-
-                    <button class="pencil" id="rainbow">RAINBOW</button>
-
-                </div>
+            <div class="pencils-area">
+                <button class="pencil" id="eraser">ERASER</button>
+                <input type="color" name="color" class="pencil" id="color-picker" value="#000000">
+                <button class="pencil" id="rainbow">RAINBOW</button>
             </div>
         </div>
     
