@@ -27,7 +27,7 @@ function getNumber(num) {
 }
 
 function getOperator(opt) {
-        if (step != 3) {
+        if (step != 3 && firstNum.length != 0 ) {
                 step = 2;
                 operator = opt;
                 display.textContent = operator;
@@ -43,6 +43,9 @@ function clearDisplay() {
 }
 
 function calculate() {
+        if (secondNum.length == 0) {
+                return;
+        }
         let result;
         firstNum = parseInt(firstNum.join(''));
         secondNum = parseInt(secondNum.join(''));
