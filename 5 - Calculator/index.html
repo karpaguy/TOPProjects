@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="display"></div>
+
+        <div class="buttons">
+            <button class="number" id="one" data-value=1 onclick="getNumber(this.dataset.value)">1</button>
+            <button class="number" id="two" data-value=2 onclick="getNumber(this.dataset.value)">2</button>
+            <button class="number" id="three" data-value=3 onclick="getNumber(this.dataset.value)">3</button>
+            <button class="number" id="four" data-value=4 onclick="getNumber(this.dataset.value)">4</button>
+            <button class="number" id="five" data-value=5 onclick="getNumber(this.dataset.value)">5</button>
+            <button class="number" id="six" data-value=6 onclick="getNumber(this.dataset.value)">6</button>
+            <button class="number" id="seven" data-value=7 onclick="getNumber(this.dataset.value)">7</button>
+            <button class="number" id="eight" data-value=8 onclick="getNumber(this.dataset.value)">8</button>
+            <button class="number" id="nine" data-value=9 onclick="getNumber(this.dataset.value)">9</button>
+            <button class="number" id="zero" data-value=0 onclick="getNumber(this.dataset.value)">0</button>
+            <button class="operator" id="plus" onclick="getOperator('+')">+</button>
+            <button class="operator" id="minus" onclick="getOperator('-')">-</button>
+            <button class="operator" id="divide" onclick="getOperator('/')">/</button>
+            <button class="operator" id="multiply" onclick="getOperator('*')">*</button>
+            <button class="operator" id="equal" onclick="calculate()">=</button>
+        </div>
+
+    </div>
+    <!-- onclick="getNumber('1') -->
+    <!-- <button onclick="appendToDisplay('7')">7</button> -->
+
+</body>
+</html>

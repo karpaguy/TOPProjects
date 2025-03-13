@@ -1,0 +1,44 @@
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 95vh;
+    border: 3px solid black;
+}
+.display {
+    background-color: rgb(38, 38, 38);
+    color: white;
+    flex-grow: 1;
+}
+.buttons {
+    flex-grow: 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---- MASS CLASS ---- */
+.number, .operator {
+    cursor: pointer;
+    margin: 2px;
+    font-size: 20px;
+}
+.clicked {
+    background-color: orange;
+    border: none;
+    transform: scale(0.95);
+}

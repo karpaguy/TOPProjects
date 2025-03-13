@@ -1,0 +1,26 @@
+Pega String
+Coloca em Number1...
+    If !NaN {
+        Para de colocar em Number1 e coloca em Operator
+    }
+Pega String
+Coloca em Number2...
+    If !NaN {
+        Para de colocar em Number2 e faz a operação
+        Coloca em Number 1 e dá display
+        Limpa Operator e Number2 (?)
+    }
+
+
+function operate() {
+    altos switchs
+}
+
+appendDisplay, pa pa pa
+
+"1 + 1"
+
+
+
+
+// Notas → Depois da operação, se a pessoa clicar em número, recoloca o Number1, se clicar em operador, segue a operação
