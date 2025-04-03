@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+/* ------- VARIABLES ------- */
+
+
+}
+
+/* ------- PAGE DISPLAY CSS ------- */
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+header {
+    width: 30%;
+    background: url('./images/evgeni-evgeniev-KAukBWGvPWQ-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main section, header section {
+    flex-grow: 1;
+}
+
+.credits-area {
+    flex-grow: 2;
+}
+
+/* ------- x CSS ------- */
