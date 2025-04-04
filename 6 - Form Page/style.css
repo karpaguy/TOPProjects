@@ -3,10 +3,11 @@
 * {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-/* ------- VARIABLES ------- */
 
+    /* ------- VARIABLES ------- */
+    --form-credits-padding-ajust:  2rem;
 
 }
 
@@ -36,15 +37,16 @@ main {
 }
 
 main section, header section {
-    flex-grow: 1;
+    flex: 1;
 }
 main section {
-    padding-left: 2rem; 
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-left: 3rem; 
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
 .credits-area {
     flex-grow: 2;
+    padding-bottom: 3rem;
 }
 
 /* ------- x CSS ------- */
@@ -55,15 +57,38 @@ main {
 
 .form-area {
     background-color: white;
+    padding-bottom: var(--form-credits-padding-ajust);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-sizing: content-box;
+}
+.form-area .account-create {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 .form-row {
     display: flex;
     text-transform: uppercase;
+    gap: 5rem;
 }
 .input-container {
     display: flex;
     flex-direction: column;
 }
 .input-container input {
-    width: 15rem;
+    width: 18rem;
+    padding: 5px;
+    background-color: rgba(252, 252, 252, 0.1);
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 5px;
+}
+.input-container label {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.form-area>p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
 }
