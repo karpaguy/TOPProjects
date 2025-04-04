@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 
+    font-family: "Open Sans", sans-serif;
 /* ------- VARIABLES ------- */
 
 
@@ -24,9 +26,11 @@ header {
 
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 main {
+    width: 70%;
     display: flex;
     flex-direction: column;
 }
@@ -34,9 +38,32 @@ main {
 main section, header section {
     flex-grow: 1;
 }
+main section {
+    padding-left: 2rem; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 .credits-area {
     flex-grow: 2;
 }
 
 /* ------- x CSS ------- */
+
+main {
+    background-color: rgb(239, 239, 239);
+}
+
+.form-area {
+    background-color: white;
+}
+.form-row {
+    display: flex;
+    text-transform: uppercase;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+.input-container input {
+    width: 15rem;
+}
