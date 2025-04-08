@@ -9,12 +9,18 @@
 <body>
     <header>
         <section class="logo-area">
-            a
+            <div class="logo">
+                <img src="./images/leaf-insect.png" alt="Logo is a leaf insect.">
+                <span class="logo-name">LYFE</span>
+            </div>
         </section>
 
         <section class="credits-area">
             <p class="credits">
-                Photo by <a href="https://unsplash.com/pt-br/@evgenievgenief?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Evgeni Evgeniev</a> on <a href="https://unsplash.com/pt-br/fotografias/close-up-foto-da-arvore-de-bordo-KAukBWGvPWQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                Photo by <a href="https://unsplash.com/pt-br/@evgenievgenief?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Evgeni Evgeniev</a> on <a href="https://unsplash.com/pt-br/fotografias/close-up-foto-da-arvore-de-bordo-KAukBWGvPWQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+            </p>
+            <p class="credits">
+                <a href="https://www.flaticon.com/br/icones-gratis/inseto" title="inseto ícones" target="_blank">Inseto ícones</a> by <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik - Flaticon</a>
             </p>
         </section>
     </header>
@@ -23,7 +29,7 @@
         <section class="hero-area">
             <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
             <p>Sign up now to get started.</p>
-            <p>You know you want to.</p>
+            <p>You <em>know</em> you want to.</p>
         </section>
 
         <section class="form-area">
@@ -50,19 +56,19 @@
                     
                     <div class="input-container">
                         <label for="phone-number">Phone Number</label>
-                        <input type="tel" name="phone-number" id="phone-number" required>
+                        <input type="tel" name="phone-number" id="phone-number">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="input-container">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="password" minlength="8" required>
                     </div>
 
                     <div class="input-container">
                         <label for="password">Confirm Password</label>
-                        <input type="password" id="password" required> 
+                        <input type="password" id="password" minlength="8" required> 
                     </div>
                 </div>
             </form>
@@ -70,7 +76,7 @@
 
         <section class="confirm-area">
             <button type="submit" form="account-create">Create Account</button>
-            <p>Alredy have an account? <span>Log in</span></p>
+            <p>Alredy have an account? <span class="green">Log in</span></p>
         </section>
     </main>
 </body>
